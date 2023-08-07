@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css');
+
+:root{
+    --red:#162938;
+    --black:#3362b8;
+    --white:#fff;
+    --light-bg:#f5f5f5;
+    --light-color:#666;
+    --border:.1rem solid var(--light-color);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --bg-color: #3362b8;
+   --second-bg-color: #323946;
+   --text-color: #fff;
+   --main-color:#0ef;
+
+ }
+ 
+ *{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear; 
+ }
+
+ 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+ }
+ 
+ body{
+    background: var(--light-bg);
+    overflow-x: hidden;
+ }
+
+ 
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color:var(--red);
+    text-transform: uppercase;
+ }
+ 
+ .btn{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    padding:1rem 3rem;
+    font-size: 2rem;
+    color:var(--white);
+    background-color: var(--red);
+    cursor: pointer;
+    text-transform: capitalize;
+    text-align: center;
+ }
+ 
+ .btn:hover{
+    background-color:var(--black);
+ }
+
+.about .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+ }
+ 
+ .about .box-container .box{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+ }
+ 
+ .about .box-container .box img{
+    width: 100%;
+    margin-bottom: 1rem;
+ }
+ 
+ .about .box-container .box h3{
+    font-size: 3rem;
+    color:var(--red);
+ }
+ 
+ .about .box-container .box p{
+    padding:1rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+    color:var(--light-color);
+ }
+ 
+
+
+
+
+ /*contact page css*/
+
+ .contact h2 {
+   margin-bottom: 3rem;
+   color: #162938;
+}
+
+.contact form {
+   max-width: 70rem;
+   margin: 1rem auto;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+   width: 100%;
+   padding: 1.5rem;
+   font-size: 1.6rem;
+   color: var(--text-color);
+   background: var(--second-bg-color);
+   border-radius: .8rem;
+   margin: .7rem 0;
+}
+
+.contact form .input-box input {
+   width: 49%;
+}
+
+.contact form textarea {
+   resize: none;
+}
+
+.contact form .btn {
+   margin-top: 2rem;
+   cursor: pointer;
+}
+
+
+ /*Service page css*/
+
+.faq .accordion-container{
+   max-width: 70rem;
+   margin:0 auto;
+}
+
+.faq .accordion-container .accordion{
+   margin:1.5rem 0;
+   box-shadow: var(--box-shadow);
+}
+
+.faq .accordion-container .accordion .accordion-heading{
+   padding:1.5rem;
+   background: var(--black);
+   color:var(--white);
+   cursor: pointer;
+   font-size: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1.5rem;
+}
+
+.faq .accordion-container .accordion .accrodion-content{
+   padding:2rem;
+   background-color: var(--white);
+   line-height: 2;
+   color:var(--light-color);
+   font-size: 1.6rem;
+   display: none;
+}
+
+.faq .accordion-container .accordion.active .accrodion-content{
+   display: inline-block;
+}
+
+.faq .accordion-container .accordion.active .accordion-heading{
+   background: var(--red);
+}
+
+.faq .accordion-container .accordion.active .accordion-heading i{
+   transform: rotate(180deg);
+}
